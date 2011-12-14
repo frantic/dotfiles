@@ -21,4 +21,5 @@ nnoremap <C-l> <C-w>l
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 set pastetoggle=<F2>
 nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> <Space> a_<Esc>r
 
