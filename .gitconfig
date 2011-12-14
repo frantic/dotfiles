@@ -1,0 +1,18 @@
+[color]
+	ui = true
+[user]
+	name = Frantic
+	email = alex.frantic@gmail.com
+[format]
+  pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+[alias]
+    st = status
+    di = diff
+    dc = diff --cached
+    aa = add --all
+    r = !git l -20
+    ra = !git r --all
+    l = log --graph --abbrev-commit --date=relative 
+    la = !git l --all
+    pom = push origin master
+    b = branch
