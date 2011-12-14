@@ -13,7 +13,11 @@ parse_git_branch2() {
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
     state="\033[0;31m"
   else
-    state="\033[0;32m"
+    if [[ ${git_status}} =~ "Your branch is ahead of" ]]; then
+      state="\033[0;33m"
+    else
+      state="\033[0;32m"
+    fi
   fi
   # add an else if or two here if you want to get more specific
 
