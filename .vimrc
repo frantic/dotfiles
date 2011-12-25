@@ -9,6 +9,9 @@ set smartindent
 set smarttab
 set incsearch
 set hlsearch
+set ruler
+set showcmd
+filetype plugin indent on
 :imap jj <Esc>
 let mapleader=","
 nnoremap <leader><leader> <C-^>
@@ -23,3 +26,4 @@ set pastetoggle=<F2>
 nmap <silent> ,/ :nohlsearch<CR>
 nmap <silent> <Space> a_<Esc>r
 
+set virtualedit=all
