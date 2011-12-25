@@ -1,5 +1,6 @@
 export CLICOLOR=1
 export LSCOLORS=Hxfxcxdxbxegedabagacad
+export PATH=~/.dotfiles:$PATH
 [[ -s "/Users/frantic/.rvm/scripts/rvm" ]] && source "/Users/frantic/.rvm/scripts/rvm"
 alias gs='git status'
 alias gd='git diff'
