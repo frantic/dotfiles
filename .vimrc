@@ -1,29 +1,36 @@
-syntax on
 set nocompatible
-set ignorecase
-set encoding=utf-8
-set tabstop=2 shiftwidth=2
-set expandtab
-set smartcase
-set smartindent
-set smarttab
-set incsearch
-set hlsearch
-set ruler
-set showcmd
+
+" Vundle setup
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle '256-jungle'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
+
 filetype plugin indent on
-:imap jj <Esc>
-let mapleader=","
-nnoremap <leader><leader> <C-^>
-nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
+syntax on
+set number
+set pastetoggle=<F2> " When I hit F2 and paste the text it doesn't screw up
+set nowritebackup    " Don't do backup as I use
+set nobackup         " git for that
+set noswapfile
+set laststatus=2     " Always show the statusline
+set mouse=nicr       " Enable mouse scrolling in VIM
+set cursorline       " Underline current line
+let mapleader = ","
+set wildmenu
+set incsearch        " Incremental highlight search
+set hlsearch
+set t_ut=            " Don't erase with background color (tmux fix)
+                     " http://snk.tuxfamily.org/log/vim-256color-bce.html
+
+nnoremap <silent> <leader>, :b#<CR>
+nnoremap <silent> <leader>/ :nohl<CR>
+nnoremap <silent> <leader>r :CtrlPBufTag<CR>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-set pastetoggle=<F2>
-nmap <silent> ,/ :nohlsearch<CR>
-nmap <silent> <Space> a_<Esc>r
 
-set virtualedit=all
+colorscheme 256-jungle
